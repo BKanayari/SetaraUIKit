@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,14 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="HistoryViewCell" customModule="Setara" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="360" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-8U-8ZK">
+                        <rect key="frame" x="8" y="8" width="324" height="44"/>
+                        <color key="backgroundColor" name="PrimaryGray"/>
+                    </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-WM-07M">
-                        <rect key="frame" x="4" y="9" width="207.33333333333334" height="42"/>
+                        <rect key="frame" x="12" y="9" width="207.33333333333334" height="42"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Oktober 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgw-Eu-Dts">
                                 <rect key="frame" x="0.0" y="1.3333333333333339" width="207.33333333333334" height="20.333333333333329"/>
@@ -36,18 +41,19 @@
                         <constraints>
                             <constraint firstItem="6k4-3S-WeS" firstAttribute="top" secondItem="Rgw-Eu-Dts" secondAttribute="bottom" id="LaR-1S-PIt"/>
                             <constraint firstItem="Rgw-Eu-Dts" firstAttribute="leading" secondItem="9PR-WM-07M" secondAttribute="leading" id="uB3-xP-3tJ"/>
-                            <constraint firstItem="Rgw-Eu-Dts" firstAttribute="top" secondItem="9PR-WM-07M" secondAttribute="top" constant="2" id="wzd-Xf-Qoa"/>
+                            <constraint firstItem="Rgw-Eu-Dts" firstAttribute="top" secondItem="9PR-WM-07M" secondAttribute="top" constant="8" id="wzd-Xf-Qoa"/>
+                            <constraint firstAttribute="trailing" secondItem="6k4-3S-WeS" secondAttribute="trailing" id="zws-FW-mPT"/>
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gPY-zr-fh3">
-                        <rect key="frame" x="336" y="16.000000000000004" width="8" height="28.333333333333332"/>
+                        <rect key="frame" x="316" y="16.000000000000004" width="8" height="28.333333333333332"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="GTX-JE-MG8"/>
                             <constraint firstAttribute="width" constant="8" id="jTD-tW-UK4"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-pt-gZT">
-                        <rect key="frame" x="266.33333333333331" y="14" width="67.666666666666686" height="32"/>
+                        <rect key="frame" x="246.33333333333334" y="14" width="67.666666666666657" height="32"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Detail"/>
                         <connections>
@@ -56,20 +62,26 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Nuq-8U-8ZK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2wA-AL-len"/>
                     <constraint firstAttribute="bottom" secondItem="p3V-pt-gZT" secondAttribute="bottom" constant="14" id="6FL-zr-PD7"/>
                     <constraint firstItem="gPY-zr-fh3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="CtO-Gc-eyJ"/>
                     <constraint firstItem="gPY-zr-fh3" firstAttribute="leading" secondItem="p3V-pt-gZT" secondAttribute="trailing" constant="2" id="H33-DE-Soi"/>
-                    <constraint firstItem="9PR-WM-07M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="L0q-Zl-QbU"/>
+                    <constraint firstItem="9PR-WM-07M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="L0q-Zl-QbU"/>
                     <constraint firstAttribute="bottom" secondItem="gPY-zr-fh3" secondAttribute="bottom" constant="14" id="LaB-Ea-Szn"/>
                     <constraint firstAttribute="trailing" secondItem="gPY-zr-fh3" secondAttribute="trailing" constant="16" id="OeU-Yb-vdD"/>
+                    <constraint firstItem="Nuq-8U-8ZK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Vgy-mj-CJC"/>
+                    <constraint firstAttribute="trailing" secondItem="Nuq-8U-8ZK" secondAttribute="trailing" constant="8" id="Zug-FB-QxV"/>
                     <constraint firstItem="p3V-pt-gZT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="fYJ-cd-7tw"/>
                     <constraint firstItem="9PR-WM-07M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="h1Q-us-Quu"/>
                     <constraint firstAttribute="bottom" secondItem="9PR-WM-07M" secondAttribute="bottom" constant="9" id="xhq-cS-buT"/>
+                    <constraint firstAttribute="bottom" secondItem="Nuq-8U-8ZK" secondAttribute="bottom" constant="8" id="xpk-yc-nj8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnDetaill" destination="p3V-pt-gZT" id="lVj-My-yRo"/>
+                <outlet property="containerHistory" destination="Nuq-8U-8ZK" id="60W-Do-sWJ"/>
+                <outlet property="imgChevronRight" destination="gPY-zr-fh3" id="kvV-s5-cve"/>
                 <outlet property="lblDateBill" destination="Rgw-Eu-Dts" id="D4o-vG-7oe"/>
                 <outlet property="lblTotalAmount" destination="6k4-3S-WeS" id="JEl-Tf-8ot"/>
             </connections>
@@ -78,5 +90,8 @@
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <namedColor name="PrimaryGray">
+            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

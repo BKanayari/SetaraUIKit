@@ -70,7 +70,7 @@
                     <rect key="frame" x="16" y="643" width="343" height="4"/>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwT-Yw-FKf">
-                    <rect key="frame" x="105" y="592" width="165" height="21"/>
+                    <rect key="frame" x="105" y="602" width="165" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -89,8 +89,8 @@
                 <constraint firstItem="c7O-pe-W8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="98" id="Mqd-pf-nfD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nH5-fb-4Zl" secondAttribute="trailing" constant="72" id="PI2-Kg-W7Y"/>
                 <constraint firstItem="Q2w-er-CH6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="105" id="U6H-Ik-4Zc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IwT-Yw-FKf" secondAttribute="bottom" constant="20" id="XBb-tV-dDg"/>
                 <constraint firstItem="nH5-fb-4Zl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="46" id="ZXG-jl-wlw"/>
+                <constraint firstItem="R9H-PD-WnA" firstAttribute="top" secondItem="IwT-Yw-FKf" secondAttribute="bottom" constant="20" id="Zdg-60-Yy3"/>
                 <constraint firstItem="PQH-cA-glO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="aoc-OW-V3x"/>
                 <constraint firstAttribute="trailing" secondItem="R9H-PD-WnA" secondAttribute="trailing" constant="16" id="b5F-45-faq"/>
                 <constraint firstItem="nH5-fb-4Zl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="72" id="btn-pe-5x6"/>

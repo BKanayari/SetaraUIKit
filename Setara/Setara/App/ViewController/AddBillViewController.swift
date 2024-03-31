@@ -29,9 +29,10 @@ class AddBillViewController: UIViewController {
     tblHistory.delegate = self
     tblHistory.dataSource = self
     tblHistory.register(UINib(nibName: "HistoryViewCell", bundle: nil), forCellReuseIdentifier: "HistoryViewCell")
-    lblCaptionBill.text = "Add_new_bill_caption".localized()
+    tblHistory.separatorStyle = .none
+    tblHistory.rowHeight = 80
+    responseNewBill()
     lblProgres.text = "1 of 3"
-    addNewBill.setTitle("Add New Bill", for: .normal)
   }
   
   @IBAction func addNewBill(_ sender: Any) {
@@ -46,20 +47,30 @@ class AddBillViewController: UIViewController {
     lblCaptionBill.text = "Add_new_bill_caption".localized()
     imgBill.image = UIImage(named: "img-bill")
     addNewBill.isHidden = false
+    addNewBill.setTitle("add_new_bill_btn".localized(), for: .normal)
     tblHistory.isHidden = true
   }
   
-  func responseHistory(){
-    
+  func updateUIForResponseHistory() {
     if mockData == 0 {
-      lblCaptionBill.text = "no_bills_history".localized()
-      imgBill.image = UIImage(named: "img-history")
+      showNoBillsHistory()
     } else {
-      tblHistory.isHidden = false
-      lblCaptionBill.text = ""
-      imgBill.image = UIImage(named: "")
-      addNewBill.isHidden = true
+      showBillsHistory()
     }
+  }
+  
+  func showNoBillsHistory() {
+    lblCaptionBill.text = NSLocalizedString("no_bills_history", comment: "")
+    imgBill.image = UIImage(named: "img-history")
+    tblHistory.isHidden = true
+    addNewBill.isHidden = false
+  }
+  
+  func showBillsHistory() {
+    tblHistory.isHidden = false
+    lblCaptionBill.text = ""
+    imgBill.image = nil
+    addNewBill.isHidden = true
   }
   
   func chooseMenu(menu : Int){
@@ -68,7 +79,7 @@ class AddBillViewController: UIViewController {
     case .newBill:
       responseNewBill()
     case .history:
-      responseHistory()
+      updateUIForResponseHistory()
     }
   }
 }

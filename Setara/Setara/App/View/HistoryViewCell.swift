@@ -12,9 +12,15 @@ class HistoryViewCell: UITableViewCell {
   @IBOutlet weak var lblDateBill: UILabel!
   @IBOutlet weak var lblTotalAmount: UILabel!
   @IBOutlet weak var btnDetaill: UIButton!
+  @IBOutlet weak var containerHistory: UIView!
+  @IBOutlet weak var imgChevronRight: UIImageView!
+  
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    containerHistory.layer.cornerRadius = 10
+    btnDetaill.tintColor = .white
+    imgChevronRight.tintColor = .white
     // Initialization code
   }
   
