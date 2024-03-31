@@ -32,6 +32,7 @@ class HistoryViewCell: UITableViewCell {
   
   
   @IBAction func doDetailHistory(_ sender: Any) {
+    //TODO: Navigate to detai history and view history detail still empty
     print("History Detail")
   }
   

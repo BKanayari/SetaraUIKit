@@ -16,7 +16,7 @@
 		E2B10DCB2BB55B2800199CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B10DCA2BB55B2800199CE1 /* Assets.xcassets */; };
 		E2B10DCE2BB55B2800199CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B10DCC2BB55B2800199CE1 /* LaunchScreen.storyboard */; };
 		E2B10DDB2BB55CFD00199CE1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DDA2BB55CFD00199CE1 /* User.swift */; };
-		E2B10DDD2BB55D4C00199CE1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DDC2BB55D4C00199CE1 /* HomeViewModel.swift */; };
+		E2B10DDD2BB55D4C00199CE1 /* AddBillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DDC2BB55D4C00199CE1 /* AddBillViewModel.swift */; };
 		E2B10DDF2BB55D6800199CE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DDE2BB55D6800199CE1 /* HomeView.swift */; };
 		E2B10DE12BB55D7D00199CE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DE02BB55D7D00199CE1 /* HomeViewController.swift */; };
 		E2B10DE62BB575E400199CE1 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DE52BB575E400199CE1 /* Localize.swift */; };
@@ -36,7 +36,7 @@
 		E2B10DCD2BB55B2800199CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2B10DCF2BB55B2800199CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B10DDA2BB55CFD00199CE1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E2B10DDC2BB55D4C00199CE1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E2B10DDC2BB55D4C00199CE1 /* AddBillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewModel.swift; sourceTree = "<group>"; };
 		E2B10DDE2BB55D6800199CE1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E2B10DE02BB55D7D00199CE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2B10DE52BB575E400199CE1 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		E2B10DD62BB55C7E00199CE1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E2B10DDC2BB55D4C00199CE1 /* HomeViewModel.swift */,
+				E2B10DDC2BB55D4C00199CE1 /* AddBillViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 				E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */,
 				E2B10DDF2BB55D6800199CE1 /* HomeView.swift in Sources */,
 				E2B10DE62BB575E400199CE1 /* Localize.swift in Sources */,
-				E2B10DDD2BB55D4C00199CE1 /* HomeViewModel.swift in Sources */,
+				E2B10DDD2BB55D4C00199CE1 /* AddBillViewModel.swift in Sources */,
 				E2B10DEF2BB5B4EF00199CE1 /* UIcolor.swift in Sources */,
 				E2B10DE12BB55D7D00199CE1 /* HomeViewController.swift in Sources */,
 				E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */,

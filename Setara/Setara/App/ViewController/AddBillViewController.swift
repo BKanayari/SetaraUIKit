@@ -22,7 +22,9 @@ class AddBillViewController: UIViewController {
   @IBOutlet weak var addNewBill: UIButton!
   @IBOutlet weak var tblHistory: UITableView!
   
-  var mockData = 2
+  var mockData = 3
+  let addBillViewModel = AddBillViewModel()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,12 +34,19 @@ class AddBillViewController: UIViewController {
     tblHistory.separatorStyle = .none
     tblHistory.rowHeight = 80
     responseNewBill()
-    lblProgres.text = "1 of 3"
+    progresView.progress = Float(AddBillViewModel.progres) / 3.0
+    lblProgres.text = "\(AddBillViewModel.progres) of 3"
   }
   
   @IBAction func addNewBill(_ sender: Any) {
+    //TODO: Navigate to modal add new vill
     print("addBill")
+    addBillViewModel.progresBar()
+    let progressFraction = Float(AddBillViewModel.progres) / 3.0
+    self.progresView.progress = progressFraction
+    self.lblProgres.text = "\(AddBillViewModel.progres) of 3"
   }
+  
   
   @IBAction func menuBill(_ sender: UISegmentedControl) {
     chooseMenu(menu: sender.selectedSegmentIndex)
