@@ -7,3 +7,6 @@
 */
 
 "welcome" = "Welcome";
+"Add_new_bill_caption" = "Add new bill to calculate";
+"no_bills_history" = "No bills history yet";
+"add_new_bill_btn" = "Add New Bill";

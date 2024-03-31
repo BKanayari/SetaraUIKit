@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2057C552BB8244300719A41 /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C532BB8244300719A41 /* AddBillViewController.swift */; };
+		E2057C562BB8244300719A41 /* AddBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C542BB8244300719A41 /* AddBillViewController.xib */; };
+		E2057C592BB87ACE00719A41 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C572BB87ACE00719A41 /* HistoryViewCell.swift */; };
+		E2057C5A2BB87ACE00719A41 /* HistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C582BB87ACE00719A41 /* HistoryViewCell.xib */; };
 		E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */; };
 		E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */; };
 		E2B10DCB2BB55B2800199CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B10DCA2BB55B2800199CE1 /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2057C532BB8244300719A41 /* AddBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
+		E2057C542BB8244300719A41 /* AddBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillViewController.xib; sourceTree = "<group>"; };
+		E2057C572BB87ACE00719A41 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		E2057C582BB87ACE00719A41 /* HistoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewCell.xib; sourceTree = "<group>"; };
 		E2B10DBE2BB55B2400199CE1 /* Setara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				E2B10DDE2BB55D6800199CE1 /* HomeView.swift */,
+				E2057C572BB87ACE00719A41 /* HistoryViewCell.swift */,
+				E2057C582BB87ACE00719A41 /* HistoryViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				E2B10DE02BB55D7D00199CE1 /* HomeViewController.swift */,
+				E2057C532BB8244300719A41 /* AddBillViewController.swift */,
+				E2057C542BB8244300719A41 /* AddBillViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -215,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B10DCE2BB55B2800199CE1 /* LaunchScreen.storyboard in Resources */,
+				E2057C562BB8244300719A41 /* AddBillViewController.xib in Resources */,
 				E2B10DE92BB5B01B00199CE1 /* Localizable.strings in Resources */,
+				E2057C5A2BB87ACE00719A41 /* HistoryViewCell.xib in Resources */,
 				E2B10DCB2BB55B2800199CE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +249,8 @@
 				E2B10DEF2BB5B4EF00199CE1 /* UIcolor.swift in Sources */,
 				E2B10DE12BB55D7D00199CE1 /* HomeViewController.swift in Sources */,
 				E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */,
+				E2057C552BB8244300719A41 /* AddBillViewController.swift in Sources */,
+				E2057C592BB87ACE00719A41 /* HistoryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

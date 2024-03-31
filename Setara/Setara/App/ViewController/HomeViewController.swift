@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     return label
     
   }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
