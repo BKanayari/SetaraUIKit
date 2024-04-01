@@ -40,6 +40,7 @@ class AddBillViewController: UIViewController {
   
   @IBAction func addNewBill(_ sender: Any) {
     //TODO: Navigate to modal add new vill
+    self.present(sheetAddItemViewController(), animated: true)
     print("addBill")
     addBillViewModel.progresBar()
     let progressFraction = Float(AddBillViewModel.progres) / 3.0

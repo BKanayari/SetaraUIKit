@@ -37,7 +37,7 @@
                         <segment title="New Bill"/>
                         <segment title="History"/>
                     </segments>
-                    <color key="selectedSegmentTintColor" name="PrimaryGray"/>
+                    <color key="selectedSegmentTintColor" systemColor="systemGrayColor"/>
                     <connections>
                         <action selector="menuBill:" destination="-1" eventType="valueChanged" id="gFp-Bp-46e"/>
                     </connections>
@@ -50,7 +50,7 @@
                     <rect key="frame" x="119" y="265" width="139" height="139"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-pe-W8K">
-                    <rect key="frame" x="98" y="419" width="179" height="21"/>
+                    <rect key="frame" x="10" y="419" width="355" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                 <constraint firstItem="PQH-cA-glO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="1" id="H7Z-Vm-zGE"/>
                 <constraint firstItem="PQH-cA-glO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="KnG-sS-A3d"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IwT-Yw-FKf" secondAttribute="trailing" constant="105" id="Lbo-LR-APL"/>
-                <constraint firstItem="c7O-pe-W8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="98" id="Mqd-pf-nfD"/>
+                <constraint firstItem="c7O-pe-W8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Mqd-pf-nfD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nH5-fb-4Zl" secondAttribute="trailing" constant="72" id="PI2-Kg-W7Y"/>
                 <constraint firstItem="Q2w-er-CH6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="105" id="U6H-Ik-4Zc"/>
                 <constraint firstItem="nH5-fb-4Zl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="46" id="ZXG-jl-wlw"/>
@@ -99,7 +99,7 @@
                 <constraint firstItem="R9H-PD-WnA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="hi4-UC-vSQ"/>
                 <constraint firstItem="Q2w-er-CH6" firstAttribute="top" secondItem="c7O-pe-W8K" secondAttribute="bottom" constant="45" id="jkQ-27-yvt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wvQ-dI-tNp" secondAttribute="trailing" id="mlx-Ct-sIK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c7O-pe-W8K" secondAttribute="trailing" constant="98" id="qMp-Lk-6rf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c7O-pe-W8K" secondAttribute="trailing" constant="10" id="qMp-Lk-6rf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q2w-er-CH6" secondAttribute="trailing" constant="105" id="wPc-dD-9I8"/>
                 <constraint firstItem="wvQ-dI-tNp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wPh-jq-fry"/>
                 <constraint firstItem="PQH-cA-glO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="xrg-vR-2qD"/>
@@ -110,14 +110,14 @@
     </objects>
     <resources>
         <image name="img-bill" width="139" height="139"/>
-        <namedColor name="PrimaryGray">
-            <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="primaryBlack">
             <color red="0.13725490196078433" green="0.14117647058823529" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
