@@ -30,6 +30,7 @@ class sheetAddItemViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     styleView()
+    overrideUserInterfaceStyle = .dark
     view.backgroundColor = .black
   }
   

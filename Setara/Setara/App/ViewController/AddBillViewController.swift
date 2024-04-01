@@ -28,6 +28,7 @@ class AddBillViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    overrideUserInterfaceStyle = .dark
     tblHistory.delegate = self
     tblHistory.dataSource = self
     tblHistory.register(UINib(nibName: "HistoryViewCell", bundle: nil), forCellReuseIdentifier: "HistoryViewCell")
