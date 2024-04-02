@@ -12,7 +12,7 @@ enum MenuBill : Int {
   case history
 }
 
-class AddBillViewController: UIViewController {
+class AddBillViewController: UIViewController ,BillNavigator{
   
   @IBOutlet weak var segmentedBill: UISegmentedControl!
   @IBOutlet weak var imgBill: UIImageView!
@@ -28,6 +28,7 @@ class AddBillViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    overrideUserInterfaceStyle = .dark
     tblHistory.delegate = self
     tblHistory.dataSource = self
     tblHistory.register(UINib(nibName: "HistoryViewCell", bundle: nil), forCellReuseIdentifier: "HistoryViewCell")
@@ -39,8 +40,8 @@ class AddBillViewController: UIViewController {
   }
   
   @IBAction func addNewBill(_ sender: Any) {
-    //TODO: Navigate to modal add new vill
-    self.present(sheetAddItemViewController(), animated: true)
+    //TODO: Navigate to modal add new Bill
+    navigateToSheetBill()
     print("addBill")
     addBillViewModel.progresBar()
     let progressFraction = Float(AddBillViewModel.progres) / 3.0
@@ -91,6 +92,16 @@ class AddBillViewController: UIViewController {
     case .history:
       updateUIForResponseHistory()
     }
+  }
+  
+  func navigateToCalculateBill() {
+    self.navigationController?.pushViewController(CalculateBillViewController(), animated: true)
+  }
+  
+  func navigateToSheetBill(){
+    let sheetAddItemVC = sheetAddItemViewController(nibName: "sheetAddItemViewController", bundle: nil)
+    sheetAddItemVC.delegate = self
+    present(sheetAddItemVC, animated: true, completion: nil)
   }
 }
 
