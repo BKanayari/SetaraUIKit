@@ -17,6 +17,7 @@
 		E2057C622BBAFBB900719A41 /* CalculateBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C602BBAFBB900719A41 /* CalculateBillViewController.xib */; };
 		E2057C672BBB040800719A41 /* BillsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C652BBB040800719A41 /* BillsViewCell.swift */; };
 		E2057C682BBB040800719A41 /* BillsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C662BBB040800719A41 /* BillsViewCell.xib */; };
+		E2057C6B2BBBB97A00719A41 /* BilllsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C6A2BBBB97A00719A41 /* BilllsNavigator.swift */; };
 		E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */; };
 		E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */; };
 		E2B10DCB2BB55B2800199CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B10DCA2BB55B2800199CE1 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		E2057C602BBAFBB900719A41 /* CalculateBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateBillViewController.xib; sourceTree = "<group>"; };
 		E2057C652BBB040800719A41 /* BillsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsViewCell.swift; sourceTree = "<group>"; };
 		E2057C662BBB040800719A41 /* BillsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillsViewCell.xib; sourceTree = "<group>"; };
+		E2057C6A2BBBB97A00719A41 /* BilllsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilllsNavigator.swift; sourceTree = "<group>"; };
 		E2B10DBE2BB55B2400199CE1 /* Setara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2057C692BBBB95500719A41 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				E2057C6A2BBBB97A00719A41 /* BilllsNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		E2B10DB52BB55B2400199CE1 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		E2B10DD72BB55C9000199CE1 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E2057C692BBBB95500719A41 /* Navigator */,
 				E2B10DD92BB55CEE00199CE1 /* ViewController */,
 				E2B10DD82BB55CA800199CE1 /* View */,
 			);
@@ -273,6 +284,7 @@
 				E2B10DEF2BB5B4EF00199CE1 /* UIcolor.swift in Sources */,
 				E2B10DE12BB55D7D00199CE1 /* HomeViewController.swift in Sources */,
 				E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */,
+				E2057C6B2BBBB97A00719A41 /* BilllsNavigator.swift in Sources */,
 				E2057C552BB8244300719A41 /* AddBillViewController.swift in Sources */,
 				E2057C592BB87ACE00719A41 /* HistoryViewCell.swift in Sources */,
 			);

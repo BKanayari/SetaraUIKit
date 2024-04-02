@@ -25,7 +25,8 @@ class sheetAddItemViewController: UIViewController {
   @IBOutlet weak var txtFieldFee: UITextField!
   @IBOutlet weak var textFieldDiscount: UITextField!
   @IBOutlet weak var lblDiscount: UILabel!
-  
+
+  weak var delegate: BillNavigator?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,6 +42,8 @@ class sheetAddItemViewController: UIViewController {
   
   @IBAction func btnSave(_ sender: Any) {
     //TODO: Save data to core data
+    delegate?.navigateToCalculateBill()
+    self.dismiss(animated: true)
     print("save")
   }
   
