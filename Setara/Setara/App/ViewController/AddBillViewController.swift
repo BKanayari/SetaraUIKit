@@ -25,15 +25,10 @@ class AddBillViewController: UIViewController ,BillNavigator{
   var mockData = 3
   let addBillViewModel = AddBillViewModel()
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     overrideUserInterfaceStyle = .dark
-    tblHistory.delegate = self
-    tblHistory.dataSource = self
-    tblHistory.register(UINib(nibName: "HistoryViewCell", bundle: nil), forCellReuseIdentifier: "HistoryViewCell")
-    tblHistory.separatorStyle = .none
-    tblHistory.rowHeight = 80
+    configTblView()
     responseNewBill()
     progresView.progress = Float(AddBillViewModel.progres) / 3.0
     lblProgres.text = "\(AddBillViewModel.progres) of 3"
@@ -42,7 +37,6 @@ class AddBillViewController: UIViewController ,BillNavigator{
   @IBAction func addNewBill(_ sender: Any) {
     //TODO: Navigate to modal add new Bill
     navigateToSheetBill()
-    print("addBill")
     addBillViewModel.progresBar()
     let progressFraction = Float(AddBillViewModel.progres) / 3.0
     self.progresView.progress = progressFraction
@@ -52,6 +46,14 @@ class AddBillViewController: UIViewController ,BillNavigator{
   
   @IBAction func menuBill(_ sender: UISegmentedControl) {
     chooseMenu(menu: sender.selectedSegmentIndex)
+  }
+  
+  func configTblView(){
+    tblHistory.delegate = self
+    tblHistory.dataSource = self
+    tblHistory.register(UINib(nibName: "HistoryViewCell", bundle: nil), forCellReuseIdentifier: "HistoryViewCell")
+    tblHistory.separatorStyle = .none
+    tblHistory.rowHeight = 80
   }
   
   func responseNewBill(){

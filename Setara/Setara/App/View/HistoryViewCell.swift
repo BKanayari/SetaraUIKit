@@ -13,20 +13,16 @@ class HistoryViewCell: UITableViewCell {
   @IBOutlet weak var lblTotalAmount: UILabel!
   @IBOutlet weak var btnDetaill: UIButton!
   @IBOutlet weak var containerHistory: UIView!
-  @IBOutlet weak var imgChevronRight: UIImageView!
-  
   
   override func awakeFromNib() {
     super.awakeFromNib()
     containerHistory.layer.cornerRadius = 10
     btnDetaill.tintColor = .white
-    imgChevronRight.tintColor = .white
     // Initialization code
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    
     // Configure the view for the selected state
   }
   
@@ -35,5 +31,4 @@ class HistoryViewCell: UITableViewCell {
     //TODO: Navigate to detai history and view history detail still empty
     print("History Detail")
   }
-  
 }

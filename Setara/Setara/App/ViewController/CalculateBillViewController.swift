@@ -18,11 +18,10 @@ class CalculateBillViewController: UIViewController {
     title = "Add Bills"
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Bill", style: .plain, target: nil, action: nil)
-    configureTableView()
-    
+    configureTableViewBill()
   }
   
-  func configureTableView(){
+  func configureTableViewBill(){
     tableViewBill.separatorStyle = .none
     tableViewBill.delegate = self
     tableViewBill.dataSource = self
@@ -30,9 +29,9 @@ class CalculateBillViewController: UIViewController {
   }
   
   @IBAction func didTapDone(_ sender: Any) {
+    self.navigationController?.pushViewController(SummaryViewController(), animated: true)
     print("Done")
   }
-  
 }
 
 extension CalculateBillViewController: UITableViewDelegate, UITableViewDataSource{

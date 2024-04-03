@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="bottom" secondItem="8Cb-gH-YaE" secondAttribute="bottom" id="zNC-Lj-6DF"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ikl-f1-xYT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ikl-f1-xYT" userLabel="line">
                                 <rect key="frame" x="0.0" y="51" width="360" height="2"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -51,7 +51,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi7-QC-n4v">
-                                <rect key="frame" x="290.66666666666669" y="12" width="67.333333333333314" height="34.333333333333336"/>
+                                <rect key="frame" x="288.66666666666669" y="12" width="67.333333333333314" height="34.333333333333336"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Edit " titleAlignment="leading">
                                     <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0g-Kd-HGw">
-                                <rect key="frame" x="310.33333333333331" y="50.333333333333329" width="49.666666666666686" height="34.333333333333329"/>
+                                <rect key="frame" x="306.33333333333331" y="56" width="49.666666666666686" height="27"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system" title=""/>
@@ -87,8 +87,9 @@
                         </subviews>
                         <color key="backgroundColor" name="primaryBlack"/>
                         <constraints>
-                            <constraint firstItem="V0g-Kd-HGw" firstAttribute="top" secondItem="Yi7-QC-n4v" secondAttribute="bottom" constant="4" id="0aD-vn-9x9"/>
+                            <constraint firstAttribute="trailing" secondItem="V0g-Kd-HGw" secondAttribute="trailing" constant="4" id="0KY-VX-ck7"/>
                             <constraint firstItem="cUV-9K-EiI" firstAttribute="top" secondItem="Ikl-f1-xYT" secondAttribute="bottom" constant="4" id="26c-Fl-wP0"/>
+                            <constraint firstItem="V0g-Kd-HGw" firstAttribute="top" secondItem="Ikl-f1-xYT" secondAttribute="bottom" constant="3" id="2Ku-7B-osF"/>
                             <constraint firstItem="eyC-Kp-6vb" firstAttribute="leading" secondItem="cUV-9K-EiI" secondAttribute="trailing" constant="4" id="2Ow-I0-ERH"/>
                             <constraint firstAttribute="height" constant="86" id="5ps-Um-pU8"/>
                             <constraint firstItem="Ikl-f1-xYT" firstAttribute="top" secondItem="5L7-Mi-Rrl" secondAttribute="bottom" constant="6" id="6JW-53-UNh"/>
@@ -96,15 +97,15 @@
                             <constraint firstItem="cUV-9K-EiI" firstAttribute="leading" secondItem="JXC-aQ-xoh" secondAttribute="leading" constant="16" id="80M-cb-amA"/>
                             <constraint firstAttribute="bottom" secondItem="5L7-Mi-Rrl" secondAttribute="bottom" constant="41" id="FGD-I0-X88"/>
                             <constraint firstAttribute="bottom" secondItem="cUV-9K-EiI" secondAttribute="bottom" constant="8" id="Hvo-9U-KGh"/>
-                            <constraint firstAttribute="trailing" secondItem="V0g-Kd-HGw" secondAttribute="trailing" id="M6j-pL-XPM"/>
                             <constraint firstItem="5L7-Mi-Rrl" firstAttribute="leading" secondItem="JXC-aQ-xoh" secondAttribute="leading" constant="16" id="Mnw-8Z-2iu"/>
                             <constraint firstItem="Ikl-f1-xYT" firstAttribute="leading" secondItem="JXC-aQ-xoh" secondAttribute="leading" id="O6H-bl-a37"/>
                             <constraint firstAttribute="width" constant="360" id="XFc-R8-rsu"/>
                             <constraint firstItem="Yi7-QC-n4v" firstAttribute="top" secondItem="JXC-aQ-xoh" secondAttribute="top" constant="12" id="Yyu-aX-Wvm"/>
                             <constraint firstAttribute="trailing" secondItem="5L7-Mi-Rrl" secondAttribute="trailing" constant="100" id="bFF-kQ-SjF"/>
                             <constraint firstAttribute="trailing" secondItem="Ikl-f1-xYT" secondAttribute="trailing" id="bbf-hg-uMb"/>
-                            <constraint firstAttribute="trailing" secondItem="Yi7-QC-n4v" secondAttribute="trailing" constant="2" id="eLv-4a-Vvf"/>
+                            <constraint firstAttribute="trailing" secondItem="Yi7-QC-n4v" secondAttribute="trailing" constant="4" id="eLv-4a-Vvf"/>
                             <constraint firstItem="5L7-Mi-Rrl" firstAttribute="top" secondItem="JXC-aQ-xoh" secondAttribute="top" constant="9" id="hlT-nL-sUm"/>
+                            <constraint firstAttribute="bottom" secondItem="V0g-Kd-HGw" secondAttribute="bottom" constant="3" id="nT6-VK-Zgu"/>
                             <constraint firstAttribute="bottom" secondItem="eyC-Kp-6vb" secondAttribute="bottom" constant="8" id="rji-0C-IgU"/>
                             <constraint firstAttribute="trailing" secondItem="eyC-Kp-6vb" secondAttribute="trailing" constant="60" id="sDf-jh-7bw"/>
                         </constraints>
