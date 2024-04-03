@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64AB6A6D2BBC715F005688B5 /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB6A6C2BBC715F005688B5 /* AddParticipantViewController.swift */; };
 		E2057C552BB8244300719A41 /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C532BB8244300719A41 /* AddBillViewController.swift */; };
 		E2057C562BB8244300719A41 /* AddBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C542BB8244300719A41 /* AddBillViewController.xib */; };
 		E2057C592BB87ACE00719A41 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C572BB87ACE00719A41 /* HistoryViewCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64AB6A6C2BBC715F005688B5 /* AddParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
 		E2057C532BB8244300719A41 /* AddBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 		E2057C542BB8244300719A41 /* AddBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillViewController.xib; sourceTree = "<group>"; };
 		E2057C572BB87ACE00719A41 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				E2057C542BB8244300719A41 /* AddBillViewController.xib */,
 				E2057C5B2BB9A50200719A41 /* sheetAddItemViewController.swift */,
 				E2057C5C2BB9A50200719A41 /* sheetAddItemViewController.xib */,
+				64AB6A6C2BBC715F005688B5 /* AddParticipantViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */,
 				E2B10DDF2BB55D6800199CE1 /* HomeView.swift in Sources */,
 				E2B10DE62BB575E400199CE1 /* Localize.swift in Sources */,
+				64AB6A6D2BBC715F005688B5 /* AddParticipantViewController.swift in Sources */,
 				E2B10DDD2BB55D4C00199CE1 /* AddBillViewModel.swift in Sources */,
 				E2057C5D2BB9A50200719A41 /* sheetAddItemViewController.swift in Sources */,
 				E2B10DEF2BB5B4EF00199CE1 /* UIcolor.swift in Sources */,
