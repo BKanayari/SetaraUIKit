@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculateBillViewController" customModule="Setara" customModuleProvider="target">
+            <connections>
+                <outlet property="lblSeconTitle" destination="adI-VT-i8N" id="SRe-un-Ci0"/>
+                <outlet property="tableViewBill" destination="clk-hh-4iE" id="ach-oa-xKl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add spending bills to calculate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adI-VT-i8N">
+                    <rect key="frame" x="16" y="59" width="232" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="clk-hh-4iE">
+                    <rect key="frame" x="16" y="112" width="361" height="640"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-m6-rpm">
+                    <rect key="frame" x="120" y="768" width="153" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pkP-GJ-h29"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Done">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="Helvetica"/>
+                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapDone:" destination="-1" eventType="touchUpInside" id="xb6-xk-9wK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dVg-m6-rpm" secondAttribute="trailing" constant="120" id="Bf4-Zm-hDU"/>
+                <constraint firstItem="clk-hh-4iE" firstAttribute="top" secondItem="adI-VT-i8N" secondAttribute="bottom" constant="32" id="CZ0-xg-pf4"/>
+                <constraint firstItem="dVg-m6-rpm" firstAttribute="top" secondItem="clk-hh-4iE" secondAttribute="bottom" constant="16" id="HqB-zd-ZNk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="clk-hh-4iE" secondAttribute="trailing" constant="16" id="Ncm-cY-oCf"/>
+                <constraint firstItem="adI-VT-i8N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RIJ-7b-AUI"/>
+                <constraint firstItem="adI-VT-i8N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VBJ-1X-HIF"/>
+                <constraint firstItem="dVg-m6-rpm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="120" id="d14-0b-oK0"/>
+                <constraint firstAttribute="bottom" secondItem="clk-hh-4iE" secondAttribute="bottom" constant="100" id="pOH-IH-WpH"/>
+                <constraint firstItem="clk-hh-4iE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wG8-Wf-ghd"/>
+            </constraints>
+            <point key="canvasLocation" x="283" y="4"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
