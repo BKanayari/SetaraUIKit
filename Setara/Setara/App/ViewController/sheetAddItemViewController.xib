@@ -25,6 +25,7 @@
                 <outlet property="textFieldDiscount" destination="eVQ-O1-XYj" id="Ewa-pF-3Ux"/>
                 <outlet property="txtFieldFee" destination="x3I-h4-ZiZ" id="grY-wR-3Mq"/>
                 <outlet property="txtFieldItem" destination="NLM-vb-4Fu" id="Eh9-Wq-aOf"/>
+                <outlet property="txtFieldPrice" destination="gsl-Qg-VDZ" id="rZg-aW-BOI"/>
                 <outlet property="txtFieldQuantity" destination="qZp-ex-4Om" id="Ksk-3f-sWZ"/>
                 <outlet property="txtFieldTax" destination="6kb-6F-nRf" id="Emp-VE-0Qy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

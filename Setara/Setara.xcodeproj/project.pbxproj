@@ -24,6 +24,10 @@
 		E2057C9B2BBC5A6C00719A41 /* SummaryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C992BBC5A6C00719A41 /* SummaryViewCell.xib */; };
 		E2057C9E2BBC70B100719A41 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057C9C2BBC70B100719A41 /* MenuViewCell.swift */; };
 		E2057C9F2BBC70B100719A41 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2057C9D2BBC70B100719A41 /* MenuViewCell.xib */; };
+		E2057CB22BBE832300719A41 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2057CB02BBE832300719A41 /* DataModel.xcdatamodeld */; };
+		E2057CB42BBE8AB100719A41 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2057CB32BBE8AB100719A41 /* CoreDataManager.swift */; };
+		E2AAE9F22BC44A9800558228 /* ParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAE9F12BC44A9800558228 /* ParticipantViewController.swift */; };
+		E2AAE9F42BC453FD00558228 /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAE9F32BC453FD00558228 /* ParticipantCell.swift */; };
 		E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */; };
 		E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */; };
 		E2B10DCB2BB55B2800199CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B10DCA2BB55B2800199CE1 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		E2057C992BBC5A6C00719A41 /* SummaryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryViewCell.xib; sourceTree = "<group>"; };
 		E2057C9C2BBC70B100719A41 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		E2057C9D2BBC70B100719A41 /* MenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
+		E2057CB12BBE832300719A41 /* Participant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Participant.xcdatamodel; sourceTree = "<group>"; };
+		E2057CB32BBE8AB100719A41 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E2AAE9F12BC44A9800558228 /* ParticipantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantViewController.swift; sourceTree = "<group>"; };
+		E2AAE9F32BC453FD00558228 /* ParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
 		E2B10DBE2BB55B2400199CE1 /* Setara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Setara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B10DC12BB55B2400199CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B10DC32BB55B2400199CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 				E2B10DCF2BB55B2800199CE1 /* Info.plist */,
 				E2B10DED2BB5B3D900199CE1 /* Extension */,
 				E2B10DE22BB55EDC00199CE1 /* Resources */,
+				E2057CB02BBE832300719A41 /* DataModel.xcdatamodeld */,
 			);
 			path = Setara;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E2B10DDC2BB55D4C00199CE1 /* AddBillViewModel.swift */,
+				E2057CB32BBE8AB100719A41 /* CoreDataManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 				E2057C992BBC5A6C00719A41 /* SummaryViewCell.xib */,
 				E2057C9C2BBC70B100719A41 /* MenuViewCell.swift */,
 				E2057C9D2BBC70B100719A41 /* MenuViewCell.xib */,
+				E2AAE9F32BC453FD00558228 /* ParticipantCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 				E2057C602BBAFBB900719A41 /* CalculateBillViewController.xib */,
 				E2057C942BBC547100719A41 /* SummaryViewController.swift */,
 				E2057C952BBC547100719A41 /* SummaryViewController.xib */,
+				E2AAE9F12BC44A9800558228 /* ParticipantViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -297,12 +309,16 @@
 				E2057C672BBB040800719A41 /* BillsViewCell.swift in Sources */,
 				E2B10DDB2BB55CFD00199CE1 /* User.swift in Sources */,
 				E2B10DC22BB55B2400199CE1 /* AppDelegate.swift in Sources */,
+				E2057CB42BBE8AB100719A41 /* CoreDataManager.swift in Sources */,
+				E2AAE9F22BC44A9800558228 /* ParticipantViewController.swift in Sources */,
+				E2057CB22BBE832300719A41 /* DataModel.xcdatamodeld in Sources */,
 				E2B10DDF2BB55D6800199CE1 /* HomeView.swift in Sources */,
 				E2B10DE62BB575E400199CE1 /* Localize.swift in Sources */,
 				E2057C612BBAFBB900719A41 /* CalculateBillViewController.swift in Sources */,
 				E2B10DDD2BB55D4C00199CE1 /* AddBillViewModel.swift in Sources */,
 				E2057C5D2BB9A50200719A41 /* sheetAddItemViewController.swift in Sources */,
 				E2B10DEF2BB5B4EF00199CE1 /* UIcolor.swift in Sources */,
+				E2AAE9F42BC453FD00558228 /* ParticipantCell.swift in Sources */,
 				E2057C9A2BBC5A6C00719A41 /* SummaryViewCell.swift in Sources */,
 				E2B10DE12BB55D7D00199CE1 /* HomeViewController.swift in Sources */,
 				E2B10DC42BB55B2400199CE1 /* SceneDelegate.swift in Sources */,
@@ -534,6 +550,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2057CB02BBE832300719A41 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2057CB12BBE832300719A41 /* Participant.xcdatamodel */,
+			);
+			currentVersion = E2057CB12BBE832300719A41 /* Participant.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E2B10DB62BB55B2400199CE1 /* Project object */;
 }

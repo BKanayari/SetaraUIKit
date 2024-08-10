@@ -14,6 +14,8 @@ enum MenuBill : Int {
 
 class AddBillViewController: UIViewController ,BillNavigator{
   
+  
+  
   @IBOutlet weak var segmentedBill: UISegmentedControl!
   @IBOutlet weak var imgBill: UIImageView!
   @IBOutlet weak var lblCaptionBill: UILabel!
@@ -86,6 +88,7 @@ class AddBillViewController: UIViewController ,BillNavigator{
     addNewBill.isHidden = true
   }
   
+  
   func chooseMenu(menu : Int){
     guard let selectedMenu = MenuBill(rawValue: menu) else { return }
     switch selectedMenu {
@@ -100,9 +103,13 @@ class AddBillViewController: UIViewController ,BillNavigator{
     self.navigationController?.pushViewController(CalculateBillViewController(), animated: true)
   }
   
+  func didSaveData() {
+  }
+  
   func navigateToSheetBill(){
     let sheetAddItemVC = sheetAddItemViewController(nibName: "sheetAddItemViewController", bundle: nil)
     sheetAddItemVC.delegate = self
+    
     present(sheetAddItemVC, animated: true, completion: nil)
   }
 }

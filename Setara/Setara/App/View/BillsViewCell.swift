@@ -9,6 +9,8 @@ import UIKit
 
 class BillsViewCell: UITableViewCell {
   
+  var didTapAddParticipant : (() ->Void)?
+  
   @IBOutlet weak var containerCellBill: UIView!
   @IBOutlet weak var lblMenuBill: UILabel!
   @IBOutlet weak var lblTotalPrice: UILabel!
@@ -24,7 +26,7 @@ class BillsViewCell: UITableViewCell {
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    lblParticipant.text = "participant".localized()
+    lblParticipant.text = "participant :".localized()
     // Configure the view for the selected state
   }
   
@@ -34,7 +36,7 @@ class BillsViewCell: UITableViewCell {
   }
   
   @IBAction func didTapAddParticipant(_ sender: Any) {
-    print("Add Participant")
+    didTapAddParticipant?()
   }
   
 }
