@@ -14,8 +14,6 @@ enum MenuBill : Int {
 
 class AddBillViewController: UIViewController ,BillNavigator{
   
-  
-  
   @IBOutlet weak var segmentedBill: UISegmentedControl!
   @IBOutlet weak var imgBill: UIImageView!
   @IBOutlet weak var lblCaptionBill: UILabel!
