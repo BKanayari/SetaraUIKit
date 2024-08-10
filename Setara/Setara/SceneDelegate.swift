@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Setara
 //
-//  Created by Irvan P. Saragi on 28/03/24.
+//  Created by bernardus kanayari on 03/04/24.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
     let vc = AddBillViewController()
+//    let vc = ParticipantViewController()
     let nav = UINavigationController(rootViewController: vc)
     window?.rootViewController = nav
     window?.makeKeyAndVisible()

@@ -130,7 +130,7 @@
                 <outlet property="lblParticipant" destination="cUV-9K-EiI" id="nwb-xg-4fk"/>
                 <outlet property="lblTotalPrice" destination="8Cb-gH-YaE" id="Q6q-DR-wUZ"/>
             </connections>
-            <point key="canvasLocation" x="-142.74809160305344" y="-46.83098591549296"/>
+            <point key="canvasLocation" x="147" y="-43"/>
         </tableViewCell>
     </objects>
     <resources>
