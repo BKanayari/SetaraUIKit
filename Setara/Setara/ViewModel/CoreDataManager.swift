@@ -125,6 +125,6 @@ struct CoreDataManager {
   }
   
   func addMoreData(){
-    print("Data")
+    print("Data Irvan")
   }
 }
