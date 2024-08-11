@@ -132,4 +132,8 @@ struct CoreDataManager {
     print("Delete Data From View Controller dev 002")
     print("from dev01")
   }
+  
+  func moreData(){
+    print("more more")
+  }
 }
