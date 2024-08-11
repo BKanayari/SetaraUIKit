@@ -136,4 +136,8 @@ struct CoreDataManager {
   func moreData(){
     print("more more")
   }
+  
+  func addNameData(){
+    print("Name")
+  }
 }
