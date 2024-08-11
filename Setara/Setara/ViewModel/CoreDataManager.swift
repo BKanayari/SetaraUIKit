@@ -129,6 +129,6 @@ struct CoreDataManager {
   }
   
   func deleteData(){
-    print("Delete Data")
+    print("Delete Data From View Controller")
   }
 }
