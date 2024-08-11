@@ -127,4 +127,8 @@ struct CoreDataManager {
   func addMoreData(){
     print("Data Irvan")
   }
+  
+  func deleteData(){
+    print("Delete Data")
+  }
 }
