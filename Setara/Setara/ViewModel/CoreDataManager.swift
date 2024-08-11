@@ -123,4 +123,8 @@ struct CoreDataManager {
           print("Participant does not belong to the current context.")
       }
   }
+  
+  func addMoreData(){
+    print("Data")
+  }
 }
