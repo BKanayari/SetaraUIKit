@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -136,10 +136,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-ex-4Om">
-                                    <rect key="frame" x="300" y="5.9999999999999982" width="50" height="23.333333333333329"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-ex-4Om">
+                                    <rect key="frame" x="153" y="11" width="200" height="23.333333333333332"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="5Xg-Qj-fgt"/>
+                                        <constraint firstAttribute="width" constant="200" id="5Xg-Qj-fgt"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -161,10 +161,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kb-6F-nRf">
-                                    <rect key="frame" x="300" y="5.9999999999999982" width="50" height="23.333333333333329"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kb-6F-nRf">
+                                    <rect key="frame" x="153" y="11" width="200" height="23.333333333333332"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="Dsz-NM-aW8"/>
+                                        <constraint firstAttribute="width" constant="200" id="Dsz-NM-aW8"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -187,10 +187,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3I-h4-ZiZ">
-                                    <rect key="frame" x="300" y="5.9999999999999982" width="50" height="23.333333333333329"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3I-h4-ZiZ">
+                                    <rect key="frame" x="153" y="11" width="200" height="23.333333333333332"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="AsM-WU-TQM"/>
+                                        <constraint firstAttribute="width" constant="200" id="AsM-WU-TQM"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -213,10 +213,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-O1-XYj">
-                                    <rect key="frame" x="300" y="5.9999999999999982" width="50" height="23.333333333333329"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-O1-XYj">
+                                    <rect key="frame" x="153" y="11" width="200" height="23.333333333333332"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="7V8-1O-16n"/>
+                                        <constraint firstAttribute="width" constant="200" id="7V8-1O-16n"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>

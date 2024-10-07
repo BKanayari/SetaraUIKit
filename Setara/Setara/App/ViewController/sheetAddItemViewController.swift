@@ -7,10 +7,9 @@
 
 import UIKit
 class sheetAddItemViewController: UIViewController {
-  
+
   let viewModel = CoreDataManager()
-  
-  
+
   @IBOutlet weak var lblAddItem: UILabel!
   @IBOutlet weak var btnClose: UIButton!
   @IBOutlet weak var containerItem: UIView!
@@ -38,6 +37,10 @@ class sheetAddItemViewController: UIViewController {
     fetchCoreData()
     overrideUserInterfaceStyle = .dark
     view.backgroundColor = .black
+
+    txtFieldTax.delegate = self
+    txtFieldFee.delegate = self
+    textFieldDiscount.delegate = self
   }
   
   
@@ -83,5 +86,18 @@ class sheetAddItemViewController: UIViewController {
       }
       sheetAddItemViewController.itemList.append(addItem)
     delegate?.didSaveData()
+  }
+}
+
+extension sheetAddItemViewController: UITextFieldDelegate {
+  // Adding percent sign after user input some number in the textfield
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    if textField == textFieldDiscount || (txtFieldFee != nil) || (txtFieldTax != nil) {
+      if var text = textField.text, !text.isEmpty {
+        text = text.replacingOccurrences(of: "%", with: "")
+
+        textField.text = "\(text)%"
+      }
+    }
   }
 }
