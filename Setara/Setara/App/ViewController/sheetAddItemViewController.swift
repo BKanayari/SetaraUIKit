@@ -50,10 +50,10 @@ class sheetAddItemViewController: UIViewController {
   
   @IBAction func btnSave(_ sender: Any) {
     //TODO: Save data to core data
-    delegate?.navigateToCalculateBill()
-    delegate?.didSaveData()
-    self.dismiss(animated: true)
     saveItem()
+    delegate?.didSaveData()
+    delegate?.navigateToCalculateBill()
+    self.dismiss(animated: true)
   }
   
   func fetchCoreData(){
@@ -71,20 +71,24 @@ class sheetAddItemViewController: UIViewController {
   }
   
   func saveItem() {
-      guard let nameItem = txtFieldItem.text,
-            let priceItem = Double(txtFieldPrice.text ?? "0"),
-            let quantity = Int(txtFieldQuantity.text ?? "0"),
-            let tax = Int(txtFieldTax.text ?? "0"),
-            let fee = Int(txtFieldFee.text ?? "0"),
-            let discount = Int(textFieldDiscount.text ?? "0")
-      else {
-          return
-      }
-      
-      guard let addItem = viewModel.addItem(itemName: nameItem, itemPrice: priceItem, quantity: quantity, tax: tax, fee: fee, discount: discount) else {
-          return
-      }
-      sheetAddItemViewController.itemList.append(addItem)
+    let tax1 = txtFieldTax.text ?? "0"
+    let fee1 = txtFieldFee.text ?? "0"
+    let disc1 = textFieldDiscount.text ?? "0"
+
+    guard let nameItem = txtFieldItem.text,
+          let priceItem = Double(txtFieldPrice.text ?? "0"),
+          let quantity = Int(txtFieldQuantity.text ?? "0"),
+          let tax = Int(tax1.removePercent),
+          let fee = Int(fee1.removePercent),
+          let discount = Int(disc1.removePercent)
+    else {
+      return
+    }
+
+    guard let addItem = viewModel.addItem(itemName: nameItem, itemPrice: priceItem, quantity: quantity, tax: tax, fee: fee, discount: discount) else {
+      return
+    }
+    sheetAddItemViewController.itemList.append(addItem)
     delegate?.didSaveData()
   }
 }
@@ -99,5 +103,11 @@ extension sheetAddItemViewController: UITextFieldDelegate {
         textField.text = "\(text)%"
       }
     }
+  }
+}
+
+extension String {
+  var removePercent: String {
+    replacingOccurrences(of: "%", with: "")
   }
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol BillNavigator: AnyObject {
   func navigateToCalculateBill()
   func didSaveData()
