@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 
 extension String {
+
+  var removePercent: String {
+    replacingOccurrences(of: "%", with: "")
+  }
+
   func localized() -> String {
     return NSLocalizedString(self, comment: self)
   }

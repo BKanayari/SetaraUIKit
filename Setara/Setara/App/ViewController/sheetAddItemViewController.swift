@@ -76,7 +76,7 @@ class sheetAddItemViewController: UIViewController {
     let disc1 = textFieldDiscount.text ?? "0"
 
     guard let nameItem = txtFieldItem.text,
-          let priceItem = Double(txtFieldPrice.text ?? "0"),
+          let priceItem = Int(txtFieldPrice.text ?? "0"),
           let quantity = Int(txtFieldQuantity.text ?? "0"),
           let tax = Int(tax1.removePercent),
           let fee = Int(fee1.removePercent),
@@ -106,8 +106,4 @@ extension sheetAddItemViewController: UITextFieldDelegate {
   }
 }
 
-extension String {
-  var removePercent: String {
-    replacingOccurrences(of: "%", with: "")
-  }
-}
+

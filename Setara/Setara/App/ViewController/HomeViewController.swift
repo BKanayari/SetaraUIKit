@@ -76,7 +76,6 @@ class HomeViewController: UIViewController {
     guard let name = textFieldName.text else { return }
     _ = CoreDataManager.shared.createParticipant(name: name)
     textFieldName.text = ""
-    
   }
   
   func coreData(){
