@@ -74,9 +74,8 @@ class HomeViewController: UIViewController {
   @objc func nameFromTextField(){
     tableView.reloadData()
     guard let name = textFieldName.text else { return }
-    let addNewParticipant = CoreDataManager.shared.createParticipant(name: name)
+    _ = CoreDataManager.shared.createParticipant(name: name)
     textFieldName.text = ""
-    
   }
   
   func coreData(){

@@ -20,11 +20,11 @@ struct CoreDataManager {
     return container
   }()
   
-  func addItem(itemName : String, itemPrice: Double, quantity: Int, tax: Int, fee : Int, discount: Int)-> Item?{
+  func addItem(itemName : String, itemPrice: Int, quantity: Int, tax: Int, fee : Int, discount: Int)-> Item?{
     let contex = persistantContainer.viewContext
     let item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: contex) as! Item
     item.nameItem = itemName
-    item.priceItem = itemPrice
+    item.priceItem = Int32(itemPrice)
     item.quantitty = Int32(quantity)
     item.tax = Int32(tax)
     item.fee = Int32(fee)

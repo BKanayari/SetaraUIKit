@@ -20,7 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
     let vc = AddBillViewController()
-//    let vc = ParticipantViewController()
     let nav = UINavigationController(rootViewController: vc)
     window?.rootViewController = nav
     window?.makeKeyAndVisible()
