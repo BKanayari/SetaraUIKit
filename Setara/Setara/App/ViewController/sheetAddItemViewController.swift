@@ -26,11 +26,12 @@ class sheetAddItemViewController: UIViewController {
   @IBOutlet weak var txtFieldFee: UITextField!
   @IBOutlet weak var textFieldDiscount: UITextField!
   @IBOutlet weak var lblDiscount: UILabel!
+  @IBOutlet weak var btnSave: UIButton!
 
   weak var delegate: BillNavigator?
-  
+
   static var itemList : [Item] = []
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     styleView()
@@ -41,35 +42,69 @@ class sheetAddItemViewController: UIViewController {
     txtFieldTax.delegate = self
     txtFieldFee.delegate = self
     textFieldDiscount.delegate = self
+
+    /// Add target for text field changes
+    txtFieldItem.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+    txtFieldPrice.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+    txtFieldQuantity.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+    txtFieldTax.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+    txtFieldFee.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+    textFieldDiscount.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
+
+    updateSaveButtonState()
   }
-  
-  
+
   @IBAction func didTapClose() {
     self.dismiss(animated: true)
   }
-  
+
   @IBAction func btnSave(_ sender: Any) {
-    //TODO: Save data to core data
     saveItem()
     delegate?.didSaveData()
     delegate?.navigateToCalculateBill()
     self.dismiss(animated: true)
   }
-  
+
+  /// Validate if all  textfields are filled
+  func validateAllTextfields() -> Bool {
+    if txtFieldItem.text?.isEmpty == true ||
+       txtFieldPrice.text?.isEmpty == true ||
+       txtFieldQuantity.text?.isEmpty == true ||
+       txtFieldTax.text?.isEmpty == true ||
+       txtFieldFee.text?.isEmpty == true ||
+       textFieldDiscount.text?.isEmpty == true {
+        return false
+    }
+    return true
+  }
+
+  /// Disable save the button before user filled all textfileld
+  func updateSaveButtonState() {
+    if validateAllTextfields() {
+        btnSave.isEnabled = true
+        btnSave.alpha = 1.0
+    } else {
+        btnSave.isEnabled = false
+        btnSave.alpha = 0.7
+    }
+  }
+
+  /// Call updateSaveButtonState when text changes
+  @objc func textFieldDidChangeSelection(_ textField: UITextField) {
+    updateSaveButtonState()
+  }
+
   func fetchCoreData(){
     if let fetchParticipant = viewModel.fetchItem(){
       sheetAddItemViewController.itemList = fetchParticipant
-      for item in sheetAddItemViewController.itemList {
-        print([item.nameItem])
-      }
     }
   }
-  
+
   func styleView(){
     containerItem.layer.cornerRadius = 10
     containerBasePrice.layer.cornerRadius = 10
   }
-  
+
   func saveItem() {
     let tax1 = txtFieldTax.text ?? "0"
     let fee1 = txtFieldFee.text ?? "0"
@@ -94,7 +129,7 @@ class sheetAddItemViewController: UIViewController {
 }
 
 extension sheetAddItemViewController: UITextFieldDelegate {
-  // Adding percent sign after user input some number in the textfield
+  /// Adding percent sign after user input some number in the textfield
   func textFieldDidEndEditing(_ textField: UITextField) {
     if textField == textFieldDiscount || (txtFieldFee != nil) || (txtFieldTax != nil) {
       if var text = textField.text, !text.isEmpty {
@@ -105,5 +140,3 @@ extension sheetAddItemViewController: UITextFieldDelegate {
     }
   }
 }
-
-

@@ -120,4 +120,3 @@ extension CalculateBillViewController: UITableViewDelegate, UITableViewDataSourc
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
-

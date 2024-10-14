@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="sheetAddItemViewController" customModule="Setara" customModuleProvider="target">
             <connections>
                 <outlet property="btnClose" destination="Doa-7m-5hf" id="LGg-0J-9P9"/>
+                <outlet property="btnSave" destination="05n-CT-P9L" id="AVf-qd-eB0"/>
                 <outlet property="containerBasePrice" destination="2fe-0Z-qhx" id="Csb-hP-mAs"/>
                 <outlet property="containerItem" destination="hj4-U2-Gjs" id="7sN-wl-JCT"/>
                 <outlet property="lblAddItem" destination="Rq3-PI-uIB" id="nl8-4Z-oSZ"/>
