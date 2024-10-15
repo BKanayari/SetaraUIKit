@@ -42,6 +42,7 @@ class sheetAddItemViewController: UIViewController {
     txtFieldTax.delegate = self
     txtFieldFee.delegate = self
     textFieldDiscount.delegate = self
+    txtFieldPrice.delegate = self
 
     /// Add target for text field changes
     txtFieldItem.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
@@ -65,7 +66,7 @@ class sheetAddItemViewController: UIViewController {
     self.dismiss(animated: true)
   }
 
-  /// Validate if all  textfields are filled
+  /// Validate if all textfields are filled
   func validateAllTextfields() -> Bool {
     if txtFieldItem.text?.isEmpty == true ||
        txtFieldPrice.text?.isEmpty == true ||
@@ -85,13 +86,29 @@ class sheetAddItemViewController: UIViewController {
         btnSave.alpha = 1.0
     } else {
         btnSave.isEnabled = false
-        btnSave.alpha = 0.7
+        btnSave.alpha = 0.8
     }
   }
 
   /// Call updateSaveButtonState when text changes
   @objc func textFieldDidChangeSelection(_ textField: UITextField) {
     updateSaveButtonState()
+
+    /// Format for price nominal separator
+    if textField == txtFieldPrice {
+        if let text = textField.text?.replacingOccurrences(of: ".", with: ""), let number = Int(text) {
+            textField.text = formatNumber(number)
+        }
+    }
+  }
+
+  /// Format number by adding dot as a thousands separator
+  func formatNumber(_ number: Int) -> String {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.groupingSeparator = "."
+    formatter.groupingSize = 3
+    return formatter.string(from: NSNumber(value: number)) ?? ""
   }
 
   func fetchCoreData(){
@@ -106,12 +123,14 @@ class sheetAddItemViewController: UIViewController {
   }
 
   func saveItem() {
+    let priceItem1 = txtFieldPrice.text ?? "0"
     let tax1 = txtFieldTax.text ?? "0"
     let fee1 = txtFieldFee.text ?? "0"
     let disc1 = textFieldDiscount.text ?? "0"
 
+    // TODO: Simplify PriceItem and Quantity logic
     guard let nameItem = txtFieldItem.text,
-          let priceItem = Int(txtFieldPrice.text ?? "0"),
+          let priceItem = Int(priceItem1.nominalSeparator),
           let quantity = Int(txtFieldQuantity.text ?? "0"),
           let tax = Int(tax1.removePercent),
           let fee = Int(fee1.removePercent),
@@ -131,7 +150,7 @@ class sheetAddItemViewController: UIViewController {
 extension sheetAddItemViewController: UITextFieldDelegate {
   /// Adding percent sign after user input some number in the textfield
   func textFieldDidEndEditing(_ textField: UITextField) {
-    if textField == textFieldDiscount || (txtFieldFee != nil) || (txtFieldTax != nil) {
+    if (textField == textFieldDiscount || textField == txtFieldFee || textField == txtFieldTax) {
       if var text = textField.text, !text.isEmpty {
         text = text.replacingOccurrences(of: "%", with: "")
 
