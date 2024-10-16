@@ -10,6 +10,7 @@ class sheetAddItemViewController: UIViewController {
 
   let viewModel = CoreDataManager()
 
+  // MARK: UI Outlets
   @IBOutlet weak var lblAddItem: UILabel!
   @IBOutlet weak var btnClose: UIButton!
   @IBOutlet weak var containerItem: UIView!
@@ -32,28 +33,17 @@ class sheetAddItemViewController: UIViewController {
 
   static var itemList : [Item] = []
 
+  // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    styleView()
-    fetchCoreData()
-    overrideUserInterfaceStyle = .dark
-    view.backgroundColor = .black
-
-    txtFieldTax.delegate = self
-    txtFieldFee.delegate = self
-    textFieldDiscount.delegate = self
-
-    /// Add target for text field changes
-    txtFieldItem.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-    txtFieldPrice.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-    txtFieldQuantity.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-    txtFieldTax.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-    txtFieldFee.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-    textFieldDiscount.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
-
+    setupUI()
+    setupTextFieldsDelegate()
+    addTextFieldTargets()
+    setupKeyboardDismissGesture()
     updateSaveButtonState()
   }
 
+  // MARK: Button Action
   @IBAction func didTapClose() {
     self.dismiss(animated: true)
   }
@@ -65,53 +55,93 @@ class sheetAddItemViewController: UIViewController {
     self.dismiss(animated: true)
   }
 
-  /// Validate if all  textfields are filled
-  func validateAllTextfields() -> Bool {
-    if txtFieldItem.text?.isEmpty == true ||
-       txtFieldPrice.text?.isEmpty == true ||
-       txtFieldQuantity.text?.isEmpty == true ||
-       txtFieldTax.text?.isEmpty == true ||
-       txtFieldFee.text?.isEmpty == true ||
-       textFieldDiscount.text?.isEmpty == true {
-        return false
+  // MARK: Setup Methods
+  private func setupUI() {
+    styleView()
+    fetchCoreData()
+    overrideUserInterfaceStyle = .dark
+    view.backgroundColor = .black
+  }
+
+  /// Assigning textfield delegate to it self
+  private func setupTextFieldsDelegate() {
+    let textFields: [UITextField] = [txtFieldPrice, txtFieldTax, txtFieldFee, textFieldDiscount]
+    textFields.forEach { $0.delegate = self }
+  }
+
+  /// Adding Textfield Target
+  private func addTextFieldTargets() {
+    let textFields: [UITextField] = [txtFieldItem, txtFieldPrice, txtFieldQuantity, txtFieldTax, txtFieldFee, textFieldDiscount]
+    textFields.forEach {
+      $0.addTarget(self, action: #selector(textFieldDidChangeSelection), for: .allEditingEvents)
     }
-    return true
+  }
+
+  /// Recognize tap to dismiss keyboard
+  private func setupKeyboardDismissGesture() {
+    let tapToDismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+    view.addGestureRecognizer(tapToDismissKeyboard)
+  }
+
+  /// Validate if all textfields are filled
+  private func validateAllTextfields() -> Bool {
+    let fields = [txtFieldItem, txtFieldPrice, txtFieldQuantity, txtFieldTax, txtFieldFee, textFieldDiscount]
+    return fields.allSatisfy { !($0?.text?.isEmpty ?? true) }
   }
 
   /// Disable save the button before user filled all textfileld
-  func updateSaveButtonState() {
-    if validateAllTextfields() {
-        btnSave.isEnabled = true
-        btnSave.alpha = 1.0
-    } else {
-        btnSave.isEnabled = false
-        btnSave.alpha = 0.7
-    }
+  private func updateSaveButtonState() {
+    btnSave.isEnabled = validateAllTextfields()
+    btnSave.alpha = btnSave.isEnabled ? 1.0 : 0.8
+  }
+
+  /// Dismiss keyboard
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
   }
 
   /// Call updateSaveButtonState when text changes
   @objc func textFieldDidChangeSelection(_ textField: UITextField) {
     updateSaveButtonState()
+
+    /// Format for price nominal separator
+    if textField == txtFieldPrice {
+      formatPriceTextField(textField)
+    }
   }
 
-  func fetchCoreData(){
+  private func formatPriceTextField(_ textField: UITextField) {
+    guard let text = textField.text?.replacingOccurrences(of: ".", with: ""), let number = Int(text) else { return }
+    textField.text = formatNumber(number)
+  }
+
+  /// Format number by adding dot as a thousands separator
+  private func formatNumber(_ number: Int) -> String {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.groupingSeparator = "."
+    formatter.groupingSize = 3
+    return formatter.string(from: NSNumber(value: number)) ?? ""
+  }
+
+  private func fetchCoreData(){
     if let fetchParticipant = viewModel.fetchItem(){
       sheetAddItemViewController.itemList = fetchParticipant
     }
   }
 
   func styleView(){
-    containerItem.layer.cornerRadius = 10
-    containerBasePrice.layer.cornerRadius = 10
+    [containerItem, containerBasePrice].forEach { $0?.layer.cornerRadius = 10 }
   }
 
   func saveItem() {
+    let priceItem1 = txtFieldPrice.text ?? "0"
     let tax1 = txtFieldTax.text ?? "0"
     let fee1 = txtFieldFee.text ?? "0"
     let disc1 = textFieldDiscount.text ?? "0"
 
     guard let nameItem = txtFieldItem.text,
-          let priceItem = Int(txtFieldPrice.text ?? "0"),
+          let priceItem = Int(priceItem1.nominalSeparator),
           let quantity = Int(txtFieldQuantity.text ?? "0"),
           let tax = Int(tax1.removePercent),
           let fee = Int(fee1.removePercent),
@@ -131,7 +161,7 @@ class sheetAddItemViewController: UIViewController {
 extension sheetAddItemViewController: UITextFieldDelegate {
   /// Adding percent sign after user input some number in the textfield
   func textFieldDidEndEditing(_ textField: UITextField) {
-    if textField == textFieldDiscount || (txtFieldFee != nil) || (txtFieldTax != nil) {
+    if (textField == textFieldDiscount || textField == txtFieldFee || textField == txtFieldTax) {
       if var text = textField.text, !text.isEmpty {
         text = text.replacingOccurrences(of: "%", with: "")
 

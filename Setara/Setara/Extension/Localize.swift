@@ -14,6 +14,10 @@ extension String {
     replacingOccurrences(of: "%", with: "")
   }
 
+  var nominalSeparator: String {
+    replacingOccurrences(of: ".", with: "")
+  }
+
   func localized() -> String {
     return NSLocalizedString(self, comment: self)
   }
